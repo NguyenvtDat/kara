@@ -2,7 +2,7 @@ import React from "react";
 
 function SidebarSongs() {
   return (
-    <div className="sidebar--songs">
+    <div className="sidebar--songs container">
       <p>sidebar--songs</p>
     </div>
   );
