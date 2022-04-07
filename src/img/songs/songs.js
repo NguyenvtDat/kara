@@ -1,10 +1,10 @@
-const songs = [
+const Songs = [
   {
     id: 0,
     title: "Stay",
-    singer: "Justin Bieber, The Kid LAROI",
-    img: "Stay.jpeg",
-    url: "https://data.chiasenhac.com/down2/2180/1/2179864-6a57f77c/128/Stay%20-%20The%20Kid%20LAROI_%20Justin%20Bieber.mp3",
+    singer: "Justin Bieber & The Kid LAROI",
+    img: require("./Stay.jpeg"),
+    url: require("./mp3/Stay.mp3"),
     lyrics: `I do the same thing
     I told you that I never would
     I told you I'd change
@@ -62,13 +62,14 @@ const songs = [
     Find nobody else as good as you
     I need you to stay, need you to stay, hey
     I need you to stay, need you to stay, hey`,
+    duration: 180,
   },
   {
     id: 1,
     title: "Wrap me in plastic",
     singer: "CHROMANCE",
-    img: "WrapMeInPlastic.jpeg",
-    url: "https://data00.chiasenhac.com/downloads/1839/1/1838931-8d160b34/128/Wrap%20Me%20In%20Plastic%20-%20Chromance.mp3",
+    img: require("./WrapMeInPlastic.jpeg"),
+    url: require("./mp3/WrapMeInPlastic.mp3"),
     lyrics: `It's my first night out with you
     Treat me right and buy me shoes
     Let me be your fantasy
@@ -150,13 +151,14 @@ const songs = [
     Out of sticks and twine
     I can call you master
     You can call me mine`,
+    duration: 190,
   },
   {
     id: 2,
     title: "Unstoppable",
     singer: "Sia",
-    img: "Unstoppable.jpeg",
-    url: "https://data2.chiasenhac.com/stream2/1620/1/1619524-39627886/128/Unstoppable%20-%20Sia.mp3",
+    img: require("./Unstoppable.jpeg"),
+    url: require("./mp3/Unstoppable.mp3"),
     lyrics: `All smiles I know what it takes
     To fool this town
     I'll do it 'til the sun goes down
@@ -234,13 +236,14 @@ const songs = [
     Unstoppable today
     Unstoppable today
     I'm unstoppable today`,
+    duration: 200,
   },
   {
     id: 3,
     title: "Dancing With Your Ghost",
     singer: "Sasha Alex Sloan",
-    img: "DancingWithYourGhost.jpeg",
-    url: "https://data.chiasenhac.com/down2/2227/1/2226747-8217b54b/128/Dancing%20With%20Your%20Ghost%20-%20Sasha%20Alex%20Slo.mp3",
+    img: require("./DancingWithYourGhost.jpeg"),
+    url: require("./mp3/DancingWithYourGhost.mp3"),
     lyrics: `Yelling at the sky
     Screaming at the world
     Baby, why'd you go away?
@@ -274,13 +277,14 @@ const songs = [
     Every night, I'm dancing with your ghost
     Every night, I'm dancing with your ghost
     Every night, I'm dancing with your ghost.`,
+    duration: 210,
   },
   {
     id: 4,
     title: "Senorita",
     singer: "Shawn Mendes, Camila Cabello",
-    img: "Senorita.jpeg",
-    url: "https://data.chiasenhac.com/down2/2211/1/2210243-9c0b5785/128/Senorita%20-%20Shawn%20Mendes_%20Camila%20Cabello.mp3",
+    img: require("./Senorita.jpeg"),
+    url: require("./mp3/Senorita.mp3"),
     lyrics: `I love it when you call me señorita
     I wish I could pretend I didn't need ya
     But every touch is ooh la la la
@@ -346,13 +350,14 @@ const songs = [
     For you
     Ooh, I should be running
     Ooh, you keep me coming for you`,
+    duration: 188,
   },
   {
     id: 5,
-    title: "double take",
+    title: "Double take",
     singer: "dhruv",
-    img: "DoubleTake.jpeg",
-    url: "https://data.chiasenhac.com/down2/2178/1/2177666-8347d20e/128/Double%20Take%20-%20Dhruv.mp3",
+    img: require("./DoubleTake.jpeg"),
+    url: require("./mp3/DoubleTake.mp3"),
     lyrics: `I could say I never dare
     To think about you in that way but
     I would be lyin'
@@ -420,13 +425,14 @@ const songs = [
     Do you feel the love
     Feel the love
     Do you feel the love`,
+    duration: 162,
   },
   {
     id: 6,
     title: "Just The Way You Are",
     singer: "Bruno Mars",
-    img: "JustTheWayYouAre.jpeg",
-    url: "https://data51.chiasenhac.com/downloads/1004/1/1003489-9580e598/128/Just%20The%20Way%20You%20Are%20-%20Bruno%20Mars.mp3",
+    img: require("./JustTheWayYouAre.jpeg"),
+    url: require("./mp3/JustTheWayYouAre.mp3"),
     lyrics: `Oh, her eyes, her eyes make the stars look like they're not shinin'
   Her hair, her hair falls perfectly without her trying
   She's so beautiful and I tell her everyday
@@ -469,13 +475,14 @@ const songs = [
   'Cause, girl, you're amazing
   Just the way you are
   Yeah`,
+    duration: 172,
   },
   {
     id: 7,
     title: "Kiss Me More",
     singer: "Doja Cat, SZA",
-    img: "KissMeMore.jpeg",
-    url: "https://data.chiasenhac.com/down2/2164/1/2163979-4e92e65b/128/Kiss%20Me%20More%20-%20Doja%20Cat_%20SZA.mp3",
+    img: require("./KissMeMore.jpeg"),
+    url: require("./mp3/KissMeMore.mp3"),
     lyrics: `We hug and yes
     We make love
     And always just say Goodnight
@@ -571,13 +578,14 @@ const songs = [
     I can do the same
     Ooh I love the taste oh-la-la-la-la-la
     All on my tongue I want it`,
+    duration: 211,
   },
   {
     id: 8,
     title: "My Love",
     singer: "Westlife",
-    img: "MyLove.jpeg",
-    url: "https://data51.chiasenhac.com/downloads/1002/1/1001338-846807a2/128/My%20Love%20-%20Westlife.mp3",
+    img: require("./MyLove.jpeg"),
+    url: require("./mp3/MyLove.mp3"),
     lyrics: `An empty street
   An empty house
   A hole inside my heart
@@ -645,13 +653,14 @@ const songs = [
   Where the fields are green
   To see you once again, my love
   `,
+    duration: 212,
   },
   {
     id: 9,
     title: "Let It Go",
     singer: "Idina Menzel",
-    img: "LetItGo.jpeg",
-    url: "https://data59.chiasenhac.com/downloads/1265/1/1264509-a397f818/128/Let%20It%20Go%20-%20Idina%20Menzel.mp3",
+    img: require("./LetItGo.jpeg"),
+    url: require("./mp3/LetItGo.mp3"),
     lyrics: `The snow glows white on the mountain tonight
   Not a footprint to be seen
   A kingdom of isolation
@@ -701,13 +710,14 @@ const songs = [
   That perfect girl is gone
   Here I stand in the light of day
   Let the storm rage on`,
+    duration: 205,
   },
   {
     id: 10,
     title: "The Lazy Song",
     singer: "Bruno Mars",
-    img: "TheLazySong.jpeg",
-    url: "https://data51.chiasenhac.com/downloads/1004/1/1003492-384a3fa9/128/The%20Lazy%20Song%20-%20Bruno%20Mars.mp3",
+    img: require("./TheLazySong.jpeg"),
+    url: require("./mp3/TheLazySong.mp3"),
     lyrics: `Today I don't feel like doing anything
   I just wanna lay in my bed
   Don't feel like picking up my phone
@@ -768,7 +778,8 @@ const songs = [
   Ooh hoo ooh hoo
   Hoo ooh ooh
   Nothing at all`,
+    duration: 198,
   },
 ];
 
-export default songs;
+export default Songs;

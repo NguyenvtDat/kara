@@ -1,6 +1,5 @@
 import React from "react";
 import SidebarNav from "./SidebarNav";
-import SidebarSuggestion from "./SidebarSuggestion";
 import SidebarSongs from "./SidebarSongs";
 import SidebarItems from "./SidebarItems";
 import logo from "../img/logo/logo.svg";
@@ -16,13 +15,12 @@ function Sidebar() {
         <img src={logo} alt="logo" />
       </div>
       <div className="general--content">
-        <SidebarSuggestion />
         <SidebarSongs />
         <SidebarItems content={Playlist} />
         <SidebarItems content={Genres} />
         <SidebarItems content={Top} />
         <SidebarItems content={NewRelease} />
-        <div class="content--note-container">
+        <div className="content--note-container">
           <p className="content--note">
             The names of the original artists are given for reference only. All
             musical material on this website is re-recorded and does not use in

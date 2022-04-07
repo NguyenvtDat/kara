@@ -1,9 +1,11 @@
 import React from "react";
-
+import Monitor from "./Monitor";
+import SongQueue from "./SongQueue";
 function Content() {
   return (
     <div className="content">
-      <div className=""></div>
+      <Monitor />
+      <SongQueue />
     </div>
   );
 }
