@@ -1,13 +1,22 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Content from "./components/Content";
-import Sidebar from "./components/Sidebar";
+import { Route, Routes, Navigate } from "react-router-dom";
+import LandingPage from "./components/common/LandingPage";
+import Home from "./components/Home";
+import { useSelector } from "react-redux";
+import RequireAuth from "./components/RequireAuth";
 
 function App() {
+  const isLogin = useSelector((state) => state.auth);
   return (
     <div className="App">
-      <Sidebar />
-      <Content />
+      <Routes>
+        <Route path="/login" element={<LandingPage />} />
+
+        <Route element={<RequireAuth />}>
+          <Route path="/" element={<Home />} />
+        </Route>
+        <Route path="*" element={<h1>404 Not Found</h1>} />
+      </Routes>
     </div>
   );
 }

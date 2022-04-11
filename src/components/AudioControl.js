@@ -79,6 +79,7 @@ function AudioControl() {
           max="100"
           value={progressbar || 0}
           ref={progressEl}
+          onChange={() => {}}
         />
 
         <i
