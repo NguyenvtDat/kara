@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import "../../landing.css";
 import { useDispatch } from "react-redux";
-import { Login } from "../../actions/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { applyMiddleware } from "redux";
 
 function LandingPage() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+    confirmPassword: "",
   });
-  const [users, setUsers] = useState(
-    JSON.parse(localStorage.getItem("users")) || []
-  );
 
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
   function handleChange(event) {
     const { name, value } = event.target;
     setFormData((prevFormData) => ({
@@ -27,14 +21,32 @@ function LandingPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const verify = users.find((user) => user.email === formData.email);
-    if (verify && formData.password == verify.password) {
-      const action = Login();
-      dispatch(action);
-      navigate(from, { replace: true });
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match");
       return;
     }
-    alert("Wrong password");
+    const user = {
+      email: formData.email,
+      password: formData.password,
+    };
+    if (!JSON.parse(window.localStorage.getItem("users"))) {
+      let users = [];
+      users.push(user);
+      window.localStorage.setItem("users", JSON.stringify(users));
+    } else {
+      let users = JSON.parse(window.localStorage.getItem("users"));
+      const index = users.findIndex(
+        (userStorage) => userStorage.email == user.email
+      );
+      if (index != -1) {
+        alert("Already exist");
+        return;
+      }
+      users.push(user);
+      window.localStorage.setItem("users", JSON.stringify(users));
+    }
+    alert("Success");
+    return;
   }
   return (
     <div className="login-page">
@@ -56,11 +68,19 @@ function LandingPage() {
             onChange={handleChange}
             value={formData.password}
           />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            className="form--input"
+            name="confirmPassword"
+            onChange={handleChange}
+            value={formData.confirmPassword}
+          />
           <button type="submit" className="form--submit">
-            Log In
-          </button>
-          <Link to="/signup" className="sign-up form--submit">
             Sign Up
+          </button>
+          <Link to="/login" className="sign-up form--submit">
+            Log In
           </Link>
         </form>
       </div>

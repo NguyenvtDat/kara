@@ -7,12 +7,19 @@ import Playlist from "../img/playlist/playlist";
 import Genres from "../img/genres/genres";
 import NewRelease from "../img/newrelease/newrelease";
 import Top from "../img/top/top";
+import { useDispatch } from "react-redux";
+import { Logout } from "../actions/auth";
 
 function Sidebar() {
+  const dispatch = useDispatch();
+  function logOut() {
+    dispatch(Logout());
+  }
   return (
     <div className="sidebar">
       <div className="sidebar--logo">
         <img src={logo} alt="logo" />
+        <button onClick={logOut}>Logout</button>
       </div>
       <div className="general--content">
         <SidebarSongs />
